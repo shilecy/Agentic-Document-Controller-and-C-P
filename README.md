@@ -61,9 +61,8 @@ Workflow Steps
 | 3    | **AI Review Agent**       | Creates document summary                | 
 | 4    | **Routing & Role Agent**  | Assigns reviewer (fallback QMR)         | 
 | 5    | **Communication Agent**   | Sends “Action Required” email           | 
-| 6    | **HITL Upload Action**    | Owner submits revised documents         | 
-| 7    | **Communication Agent**   | Sends final approval request email      | 
-| 8    | **Compliance Agent**      | Logs compliance & sets ACTIVE (Renewed) | 
+| 6    | **Communication Agent**   | Sends final approval request email      | 
+| 7    | **Compliance Agent**      | Logs compliance & sets ACTIVE (Renewed) | 
 
 Process B — Credentialing & Privileging (C&P)
 
