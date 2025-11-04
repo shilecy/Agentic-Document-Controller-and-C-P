@@ -1,0 +1,4 @@
+{
+    "expiry_notice": "Dear {owner_name},\n\nYour document {title} will expire on {expiry_date}. Please review and confirm if amendments are needed. Suggested update: {ai_summary}.\n\nRegards,\nDocument Control AI",
+    "review_request": "Hi {reviewer_name},\n\n{owner_name} has submitted {title} for review. Kindly review and approve.\n\nRegards,\nDocument Control AI"
+}

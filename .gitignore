@@ -1,0 +1,18 @@
+# .gitignore
+
+# Virtual Environment
+venv/
+gemini_venv/
+.idea/  # IDE (PyCharm/IntelliJ) settings
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# Logs and Outputs
+*.log
+logs/
+outputs/
+
+# Sensitive Data (CRUCIAL!)
+.env

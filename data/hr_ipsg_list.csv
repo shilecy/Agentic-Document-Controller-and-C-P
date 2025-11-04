@@ -1,0 +1,4 @@
+name,position,email,department,approval_role
+Dr. Chan,Consultant,dr.chan@phmk.my,Medical,Owner
+Ms. Lim,Nurse,nurse.lim@phmk.my,Nursing,Reviewer
+Mr. Lee,QMR,qmr@phmk.my,Quality,Approver
