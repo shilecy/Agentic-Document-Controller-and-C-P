@@ -14,7 +14,7 @@ It is highly recommended to use a Python virtual environment:
     python -m venv venv
 
 ### 2. Activate the virtual environment
-# Windows:
+### Windows:
     .\venv\Scripts\activate
 
 
@@ -31,11 +31,11 @@ For the AI agents to function (i.e., generate summaries, determine urgency, and 
 
 Note: If your daily quota is exceeded, the agents will use robust fallback logic, but the AI-driven features will fail, as seen in the command line output.
 
-## Windows (Command Prompt):
+### Windows (Command Prompt):
     set GEMINI_API_KEY="YOUR_API_KEY_HERE"
 
 
-## How to Run the Local Simulation
+### How to Run the Local Simulation
 
 Once the setup is complete and your environment is activated, execute the entire agentic workflow with a single command:
 
