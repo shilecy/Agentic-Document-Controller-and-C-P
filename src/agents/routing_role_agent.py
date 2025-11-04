@@ -71,7 +71,7 @@ def determine_reviewers_and_approvers(doc_title, owner_role):
     
         # Use the structured output feature
         response = client.models.generate_content(
-            model='gemini-2.5-flash', # Or gemini-2.5-pro for better fidelity
+            model='gemini-2.5-pro', # Or gemini-2.5-pro for better fidelity
             contents=prompt,
             config={
                 "response_mime_type": "application/json", # Enforce JSON output

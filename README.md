@@ -48,3 +48,39 @@ The script will clean previous logs, initialize the workflow, and execute both t
 
 This workflow manages the mandatory review and renewal of hospital documents (like Policies and Work Instructions). All steps marked "HITL Simulation" are automatically completed by the script in batch mode for demonstration purposes.
 
+Process A — Document Control Lifecycle 
+
+This workflow runs daily to identify expiring documents, route them for review, and log compliance decisions.
+
+Workflow Steps
+
+| Step | Agent                     | Core Action                             | AI / Human Role               |
+| ---- | ------------------------- | --------------------------------------- | ----------------------------- |
+| 1    | **Orchestrator**          | Starts daily document check             | —                             |
+| 2    | **Document Expiry Agent** | Identifies expiring docs & urgency      | AI — urgency prediction    |
+| 3    | **AI Review Agent**       | Creates document summary                | AI — content summarization |
+| 4    | **Routing & Role Agent**  | Assigns reviewer (fallback QMR)         | AI — reviewer selection    |
+| 5    | **Communication Agent**   | Sends “Action Required” email           | Automation                 |
+| 6    | **HITL Upload Action**    | Owner submits revised documents         | Human approval flow        |
+| 7    | **Communication Agent**   | Sends final approval request email      | Automation                 |
+| 8    | **Compliance Agent**      | Logs compliance & sets ACTIVE (Renewed) | System update               |
+
+Process B — Credentialing & Privileging (C&P)
+
+Used to verify consultant credentials and grant practice privileges.
+
+| Step | Agent                             | Action                                                    | Outcome                        | AI / Human Role           |
+| ---- | --------------------------------- | --------------------------------------------------------- | ------------------------------ | ------------------------- |
+| 1    | **Orchestrator**                  | Start new C&P case                                        | —                              | —                         |
+| 2    | **Credential Verification Agent** | Verify compliance                                         | Pass/Fail                      | AI — policy validation |
+| 3    | **Routing & Role Agent**          | Determine approver                                        | Approver selected              | AI                     |
+| 4    | **Communication Agent**           | Send incomplete docs notice **OR** final approval request | Email sent                     | Automation             |
+| 5    | **HITL Simulation**               | Reviewer approves                                         | Human approval                 | HITL                   |
+| 6    | **Compliance Agent**              | Log privileges granted                                    | Status = `ACTIVE (Privileged)` |  System                  |
+
+Final Consolidation
+
+| Step | Agent                | Core Action                                 |
+| ---- | -------------------- | ------------------------------------------- |
+| 1    | **Compliance Agent** | Aggregates metrics & generates AI dashboard |
+| 2    | **Orchestrator**     | Final logging & shutdown                    |

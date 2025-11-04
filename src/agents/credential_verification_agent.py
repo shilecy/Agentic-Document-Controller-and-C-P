@@ -44,7 +44,7 @@ def verify_consultant_credentials():
     try:
         client = genai.Client()
         response = client.models.generate_content(
-            model='gemini-2.5-flash', # Use Pro for better reasoning on policy text
+            model='gemini-2.5-pro', # Use Pro for better reasoning on policy text
             contents=prompt,
             config={
                 "response_mime_type": "application/json",

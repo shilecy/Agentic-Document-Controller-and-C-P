@@ -110,7 +110,7 @@ def generate_dashboard(metrics):
     try:
         client = genai.Client()
         response = client.models.generate_content(
-            model='gemini-2.5-flash', # Use Pro for better summarization and reasoning
+            model='gemini-2.5-pro', # Use Pro for better summarization and reasoning
             contents=prompt
         )
         executive_summary = response.text
