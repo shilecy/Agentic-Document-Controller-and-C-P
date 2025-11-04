@@ -44,7 +44,7 @@ Once the setup is complete and your environment is activated, execute the entire
 
 The script will clean previous logs, initialize the workflow, and execute both the Document Control and Credentialing & Privileging processes sequentially, logging all actions and communications.
 
-## The Simulated Documents Workflow (Process A Detail)
+## The Simulated Documents Workflow 
 
 This workflow manages the mandatory review and renewal of hospital documents (like Policies and Work Instructions). All steps marked "HITL Simulation" are automatically completed by the script in batch mode for demonstration purposes.
 
